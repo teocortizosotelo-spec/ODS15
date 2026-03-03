@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 15: Vida de Ecosistemas Terrestres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --forest-green: #2d5a27;
+            --light-earth: #f4f1ea;
+            --border-clay: #a67c52;
+        }
+
+        body {
+            background-color: #fafaf9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* Estilos base para los contenedores solicitados */
+        .ods-container {
+            background-color: var(--light-earth);
+            border: 3px solid var(--border-clay);
+            padding: 2rem;
+            margin: 1.5rem auto;
+            border-radius: 12px;
+            max-width: 1000px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: var(--forest-green);
+            border-radius: 6px;
+            transition: opacity 0.3s;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .hidden-page {
+            display: none;
+        }
+
+        h1, h2 {
+            color: var(--forest-green);
+            font-weight: bold;
+        }
+
+        img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            margin: 1rem 0;
+        }
+
+        .infographic-box {
+            background: white;
+            border: 2px dashed var(--forest-green);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PÁGINA: INDEX (INTRODUCCIÓN Y METAS) -->
+    <div id="page-index">
+        <header class="text-center py-8">
+            <h1 class="text-4xl">ODS 15: Gestionar Sosteniblemente los Bosques</h1>
+            <p class="mt-2 text-lg italic text-gray-600">Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres.</p>
+        </header>
+
+        <!-- Contenedor 1: Menú -->
+        <nav class="ods-container">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#elem1-index" class="nav-link">Imagen Principal</a>
+                <a href="#elem2-index" class="nav-link">Metas y Objetivos</a>
+                <a href="#elem3-index" class="nav-link">Saber Más</a>
+                <a href="#elem4-index" class="nav-link">Infografía</a>
+                <button onclick="togglePage('page-secundaria')" class="nav-link bg-amber-700 font-bold">IR A PÁGINA SECUNDARIA</button>
+            </div>
+        </nav>
+
+        <!-- Elemento 1: Imagen Fotográfica -->
+        <section id="elem1-index" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Nuestros Pulmones Verdes</h2>
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=1000" alt="Bosque denso y sostenible" onerror="this.src='https://via.placeholder.com/800x400?text=Imagen+de+Bosque+Sostenible'">
+            <p class="text-center mt-2 text-gray-600 italic">Los bosques albergan más del 80% de todas las especies terrestres de animales, plantas e insectos.</p>
+        </section>
+
+        <!-- Elemento 2: Texto Metas con imágenes -->
+        <section id="elem2-index" class="ods-container">
+            <h2 class="text-2xl mb-4">Metas del Objetivo 15</h2>
+            <p class="mb-4">Para el año 2030, la Agenda busca velar por la conservación de los ecosistemas montañosos, incluida su biodiversidad, a fin de mejorar su capacidad de proporcionar beneficios esenciales para el desarrollo sostenible.</p>
+            
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800" alt="Paisaje natural" class="my-4">
+
+            <h3 class="text-xl font-bold mt-6 mb-2">Lucha contra la desertificación</h3>
+            <p class="mb-4">Es vital rehabilitar las tierras y los suelos degradados, incluidas las tierras afectadas por la desertificación, la sequía y las inundaciones, y procurar alcanzar un mundo con una degradación neutra del suelo.</p>
+            
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=800" alt="Naturaleza protegida" class="my-4">
+
+            <p>Se deben tomar medidas urgentes y significativas para reducir la degradación de los hábitats naturales, detener la pérdida de la diversidad biológica y proteger las especies amenazadas y evitar su extinción.</p>
+        </section>
+
+        <!-- Elemento 3: Lista con Links -->
+        <section id="elem3-index" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Recursos Educativos</h2>
+            <ul class="list-disc list-inside space-y-3">
+                <li>Información oficial de la ONU sobre el ODS 15. <a href="https://www.un.org/sustainabledevelopment/es/biodiversity/" class="text-blue-600 underline" target="_blank">Visitar sitio</a></li>
+                <li>Estrategias de gestión forestal sostenible. <a href="http://www.fao.org/sustainable-development-goals/goal-15/es/" class="text-blue-600 underline" target="_blank">Saber más en FAO</a></li>
+                <li>Portal de biodiversidad mundial. <a href="https://www.cbd.int/" class="text-blue-600 underline" target="_blank">Convención sobre Diversidad Biológica</a></li>
+            </ul>
+        </section>
+
+        <!-- Elemento 4: Infografía -->
+        <section id="elem4-index" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Infografía: Estado de los Suelos</h2>
+            <div class="infographic-box">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-4 border border-gray-200">
+                        <p class="text-3xl font-bold text-green-700">31%</p>
+                        <p class="text-xs uppercase">Superficie terrestre cubierta por bosques</p>
+                    </div>
+                    <div class="p-4 border border-gray-200">
+                        <p class="text-3xl font-bold text-red-600">13M</p>
+                        <p class="text-xs uppercase">Hectáreas de bosque perdidas anualmente</p>
+                    </div>
+                    <div class="p-4 border border-gray-200">
+                        <p class="text-3xl font-bold text-amber-600">2.6B</p>
+                        <p class="text-xs uppercase">Personas dependen de la agricultura</p>
+                    </div>
+                    <div class="p-4 border border-gray-200">
+                        <p class="text-3xl font-bold text-blue-500">80%</p>
+                        <p class="text-xs uppercase">Especies viven en ecosistemas terrestres</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">Datos basados en el informe de progreso de los ODS.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- PÁGINA: SECUNDARIA (DATOS DESTACABLES) -->
+    <div id="page-secundaria" class="hidden-page">
+        <header class="text-center py-8">
+            <h1 class="text-4xl">Datos Destacables y Actualidad</h1>
+            <p class="mt-2 text-lg italic text-gray-600">Cifras que demuestran la urgencia de actuar por nuestra tierra.</p>
+        </header>
+
+        <!-- Contenedor 1: Menú (Mismo estilo) -->
+        <nav class="ods-container">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#elem1-sec" class="nav-link">Biodiversidad en Datos</a>
+                <a href="#elem2-sec" class="nav-link">Análisis Crítico</a>
+                <a href="#elem3-sec" class="nav-link">Últimas Noticias</a>
+                <a href="#elem4-sec" class="nav-link">Video Relacionado</a>
+                <button onclick="togglePage('page-index')" class="nav-link bg-green-700 font-bold">IR A PÁGINA PRINCIPAL</button>
+            </div>
+        </nav>
+
+        <!-- Elemento 1: Imagen Fotográfica -->
+        <section id="elem1-sec" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Impacto de la Desertificación</h2>
+            <img src="https://images.unsplash.com/photo-1541830826426-4416de07e0f3?auto=format&fit=crop&q=80&w=1000" alt="Imagen de tierra seca" onerror="this.src='https://via.placeholder.com/800x400?text=Impacto+Desertificacion'">
+            <p class="text-center mt-2 text-gray-600 italic">Cerca de 1.600 millones de personas dependen de los bosques para su sustento.</p>
+        </section>
+
+        <!-- Elemento 2: Texto Datos Destacables con imágenes -->
+        <section id="elem2-sec" class="ods-container">
+            <h2 class="text-2xl mb-4">Cifras que debemos conocer</h2>
+            <p class="mb-4">La degradación de la tierra afecta a miles de millones de personas y contribuye a la extinción de especies. Alrededor de un millón de especies animales y vegetales están ahora en peligro de extinción.</p>
+            
+            <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&q=80&w=800" alt="Vida animal amenazada" class="my-4">
+
+            <h3 class="text-xl font-bold mt-6 mb-2">Ecosistemas de montaña</h3>
+            <p class="mb-4">Las montañas proporcionan entre el 60% y el 80% del agua dulce de la Tierra. Sin embargo, su biodiversidad es altamente vulnerable al cambio climático y al uso insostenible de los recursos.</p>
+            
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800" alt="Montañas vitales" class="my-4">
+
+            <p>La seguridad alimentaria depende de la preservación de la biodiversidad agrícola, la cual está disminuyendo rápidamente en todo el mundo.</p>
+        </section>
+
+        <!-- Elemento 3: Lista de Noticias -->
+        <section id="elem3-sec" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Actualidad y Noticias</h2>
+            <ul class="list-disc list-inside space-y-3">
+                <li>Nuevos acuerdos para proteger el Amazonas. <a href="https://news.un.org/es/story/2023/08/1523272" class="text-blue-600 underline" target="_blank">Leer Noticia</a></li>
+                <li>Restauración de ecosistemas en la década 2021-2030. <a href="https://www.decadeonrestoration.org/es" class="text-blue-600 underline" target="_blank">Ver Proyecto</a></li>
+                <li>Informe sobre el estado de los bosques del mundo. <a href="https://www.fao.org/state-of-forests/es/" class="text-blue-600 underline" target="_blank">Consultar Informe</a></li>
+            </ul>
+        </section>
+
+        <!-- Elemento 4: Video -->
+        <section id="elem4-sec" class="ods-container">
+            <h2 class="text-2xl mb-4 text-center">Video Informativo ODS 15</h2>
+            <div class="video-container">
+                <!-- Se utiliza un video representativo de la ONU sobre el ODS 15 -->
+                <iframe src="https://www.youtube.com/embed/OHeK1n9q7D4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="mt-4 text-sm text-center text-gray-500">Video explicativo sobre la importancia de la vida en la tierra.</p>
+        </section>
+    </div>
+
+    <footer class="text-center py-10 text-gray-500">
+        <p>© 2024 Proyecto Educativo Agenda 2030 - ODS 15</p>
+    </footer>
+
+    <script>
+        function togglePage(pageId) {
+            // Ocultar todas las páginas
+            document.getElementById('page-index').classList.add('hidden-page');
+            document.getElementById('page-secundaria').classList.add('hidden-page');
+            
+            // Mostrar la seleccionada
+            document.getElementById(pageId).classList.remove('hidden-page');
+            
+            // Hacer scroll hacia arriba
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
